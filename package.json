@@ -1,0 +1,14 @@
+{
+  "name": "react-redux-template",
+  "version": "1.0.0",
+  "description": "A starter kit for developing React&Redux app",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
