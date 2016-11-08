@@ -24,10 +24,10 @@
         "rendering",
       ],
       groups: {
-        rendering: {
+        rendering: [
           "/^render.+$/",
           "render",
-        },
+        ],
       },
     }],
   },
