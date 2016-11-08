@@ -6,6 +6,7 @@
   "scripts": {
     "webpack": "webpack --progress --colors --watch",
     "start": "webpack-dev-server --inline --hot",
+    "lint": "eslint src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
