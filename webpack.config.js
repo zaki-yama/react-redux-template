@@ -2,11 +2,11 @@ module.exports = {
   context: __dirname + '/src',
   entry: {
     javascript: './index.js',
-    html: './index.html'
+    html: './index.html',
   },
   output: {
     path: __dirname + '/dist',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   // Configuration for dev server
   devServer: {
@@ -23,10 +23,10 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        loader: 'file?name=[path][name].[ext]'
-      }
-    ]
-  }
+        loader: 'file?name=[path][name].[ext]',
+      },
+    ],
+  },
   // http://webpack.github.io/docs/configuration.html#resolve-extensions
   //resolve: {
     //extensions: ['', '.js', '.jsx']
