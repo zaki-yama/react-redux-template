@@ -18,7 +18,7 @@ export default {
     contentBase: 'dist',
     port: 3000,
   },
-  devtool: 'inline-source-map',
+  devtool: PRODUCTION ? 'cheap-module-source-map' : 'inline-source-map',
   module: {
     loaders: [
       {
