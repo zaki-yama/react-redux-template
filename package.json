@@ -4,7 +4,8 @@
   "description": "A starter kit for developing React&Redux app",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack --progress --colors --watch",
+    "build": "webpack --progress --colors",
+    "build:prod": "NODE_ENV=production npm run build",
     "start": "webpack-dev-server --inline --hot",
     "lint": "eslint src",
     "test": "echo \"Error: no test specified\" && exit 1"
