@@ -45,6 +45,7 @@ export default {
             warnings: false,
           },
         }),
+        new webpack.optimize.DedupePlugin(),
       ] : []
     ),
   ],
