@@ -1,11 +1,13 @@
+import path from 'path';
+
 export default {
-  context: __dirname + '/src',
+  context: path.resolve(__dirname, './src'),
   entry: {
     javascript: './index.js',
     html: './index.html',
   },
   output: {
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
   },
   // Configuration for dev server
