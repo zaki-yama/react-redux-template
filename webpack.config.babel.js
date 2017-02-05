@@ -1,3 +1,4 @@
+import webpack from 'webpack';
 import path from 'path';
 
 export default {
@@ -29,6 +30,13 @@ export default {
       },
     ],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      },
+    }),
+  ],
   // http://webpack.github.io/docs/configuration.html#resolve-extensions
   //resolve: {
     //extensions: ['', '.js', '.jsx']
