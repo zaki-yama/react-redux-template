@@ -40,6 +40,7 @@ export default {
             warnings: false,
           },
         }),
+        new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
       ] : []
     ),
