@@ -1,5 +1,4 @@
 import webpack from 'webpack';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import path from 'path';
 
 const PRODUCTION = process.env.NODE_ENV === 'production';
@@ -28,7 +27,7 @@ export default {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader'),
+        loaders: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
