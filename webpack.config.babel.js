@@ -46,7 +46,9 @@ export default {
         new webpack.optimize.UglifyJsPlugin({
           sourceMap: true,
         }),
-      ] : []
+      ] : [
+        new webpack.NamedModulesPlugin(),
+      ]
     ),
   ],
   // http://webpack.github.io/docs/configuration.html#resolve-extensions
