@@ -19,7 +19,7 @@ export default {
 
   devtool: PRODUCTION ? 'cheap-module-source-map' : 'inline-source-map',
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -27,7 +27,11 @@ export default {
       },
       {
         test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
       },
     ],
   },
@@ -40,13 +44,11 @@ export default {
     ...(
       PRODUCTION ? [
         new webpack.optimize.UglifyJsPlugin({
-          compress: {
-            warnings: false,
-          },
+          sourceMap: true,
         }),
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.DedupePlugin(),
-      ] : []
+      ] : [
+        new webpack.NamedModulesPlugin(),
+      ]
     ),
   ],
   // http://webpack.github.io/docs/configuration.html#resolve-extensions
